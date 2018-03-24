@@ -20,6 +20,7 @@
       else if type is '[object Array]'
         for f of obj
           prepare obj[f]
+      true
     collapse = (obj) ->
       type = Object.prototype.toString.call obj
       if type is '[object Object]'
@@ -36,6 +37,7 @@
               vId: visited[vObj].dc_id
           else
             collapse obj[key]
+      true
     prepare obj
     for v in visited
       collapse v
@@ -59,7 +61,8 @@
         for key of obj
           if obj[key] and obj[key].vId
             obj[key] = flattened[obj[key].vId]
-          doInflate obj[key]          
+          doInflate obj[key]
+      true
     doInflate flattened.v1
     flattened.v1
   flatten: flatten

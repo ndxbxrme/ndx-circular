@@ -5,3 +5,4 @@ git push origin master
 call bower version %1
 call npm version %1 --no-git-tag-version
 git push origin --tags
+npm publish
