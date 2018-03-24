@@ -1,11 +1,12 @@
 {
   "name": "ndx-circular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "flatten/inflate cicular references",
   "main": "build/index.js",
   "scripts": {
     "test": "node build/test.js"
   },
+  "ndxIgnore": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/ndxbxrme/ndx-circular"
